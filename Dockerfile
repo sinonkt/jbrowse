@@ -15,7 +15,6 @@ RUN apt-get update -y && \
 RUN curl -L -O https://github.com/GMOD/jbrowse/releases/download/${JBROWSE_VERSION}-release/JBrowse-${JBROWSE_VERSION}.zip && \
   rm -rf /app && \
   unzip -j JBrowse-${JBROWSE_VERSION}.zip -d /app && \
-  rm -f JBrowse-${JBROWSE_VERSION}.zip && \
   cd /app && \
   rm -rf extlib && \
   ./bin/cpanm -v --notest -l extlib/ Bio::Perl@1.7.2 && \
