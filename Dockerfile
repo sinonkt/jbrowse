@@ -22,10 +22,4 @@ RUN curl -L -O https://github.com/GMOD/jbrowse/releases/download/${JBROWSE_VERSI
   ./bin/cpanm JSON && \
   ./setup.sh
 
-  
-  # mv JBrowse-${JBROWSE_VERSION} /var/www/html/jbrowse && \
-  # chown -R 1001 /var/www/html/jbrowse && \
-  # cd /var/www/html/jbrowse && \
-  # ./setup.sh
-
-# USER 1001
+USER 1001
